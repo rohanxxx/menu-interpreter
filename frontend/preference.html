@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Restrictions Form</title>
+    <link rel="stylesheet" href="./css/preference.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-icon" id="menuIcon">
+            <span>☰</span>
+        </div>
+        <div class="navbar-buttons" id="navbarButtons">
+            <button class="nav-button" onclick="redirectToMenu()">Home</button>
+            <button class="nav-button" onclick="redirectToMenuSearch()">Search for menus by restaurant</button>
+            <button class="nav-button" onclick="redirectToScanMenu()">Scan a menu</button>
+            <button class="nav-button" onclick="redirectToMyProfile()">My profile</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="user-info">
+            <img src="./image/user_icon.jpg" alt="User Icon" class="user-icon">
+            <div class="user-details">
+                <p id="usernameDisplay"><strong>Username:</strong> <span id="actualUsername">User not logged in</span></p>
+                <!-- <p><strong>Email:</strong> actualuser@email.com</p> -->
+            </div>
+        </div>
+        
+        <h2>Please check your health conditions, as well as the items that you cannot eat, are allergic to, or want to avoid in general:</h2>
+        <form class="restrictions-form" id="preferenceForm">
+            <div class="form-content">
+            <div class="row">
+                <div class="column">
+                    <label><input type="checkbox"> Chili</label>
+                    <label><input type="checkbox"> Nut</label>
+                    <label><input type="checkbox"> Shellfish</label>
+                    <label><input type="checkbox"> Dairy</label>
+                <!-- </div>
+                <div class="column"> -->
+                    <label><input type="checkbox"> Egg</label>
+                    <label><input type="checkbox"> Soy</label>
+                    <label><input type="checkbox"> Gout (Avoid High Uric Acid Foods)</label>
+                    <label><input type="checkbox"> Seafood</label>
+                </div>
+                <div clas="column">
+                    <div class="input-group">
+                        <label for="foodPreferences">Food Preferences:</label>
+                        <input type="text" id="foodPreferences" name="foodPreferences" placeholder="e.g., Vegan, Seafood">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label><input type="checkbox"> Organs (liver, kidney, etc.)</label>
+                    <label><input type="checkbox"> Red meat</label>
+                    <label><input type="checkbox"> Alcohol</label>
+                    <label><input type="checkbox"> Ice cream</label>
+                <!-- </div>
+                <div class="column"> -->
+                    <label><input type="checkbox"> Lactose Intolerance</label>
+                    <label><input type="checkbox"> Meat (i.e. you are vegetarian)</label>
+                    <label><input type="checkbox"> Kosher-only</label>
+                    <label><input type="checkbox"> Bananas</label>
+                </div>
+                <div clas="column">
+                    <div class="input-group">
+                        <label for="dietaryRestrictions">Dietary Restrictions:</label>
+                        <input type="text" id="dietaryRestrictions" name="dietaryRestrictions" placeholder="e.g., Gluten-free, Nut allergies">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="submit-container">
+                <div id="message"></div>
+                <button type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/apigClient.js"></script>
+    <script type="text/javascript" src="./assets/preference.js"></script>
+    <script src="./assets/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Retrieve the username from localStorage
+        var username = localStorage.getItem('username');
+    
+        // Check if the username exists and update the display
+        if (username) {
+            document.getElementById('actualUsername').textContent = username;
+        }
+    });
+    </script>
+</body>
+</html>
+

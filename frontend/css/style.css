@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    
+    /*display: flex;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh; /* Set the height to fill the entire viewport */
+    width: 50px;
+
+    transition: width 0.3s;
+}
+
+.navbar.active {
+    width: 200px; /* Adjust the expanded width as needed */
+}
+
+.navbar-buttons {
+    display: none;
+    flex-direction: column;
+}
+
+.nav-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Adjust styles for vertical navbar */
+.menu-icon {
+    /*float: left; Float the icon to the left */
+    order: 1;
+    margin-bottom: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+
+    margin-left: 50px;
+
+    background-color: #f5f5f5;
+}
+
+.title {
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #777;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 50px;
+
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Make the container take up the whole horizontal space */
+    max-width: 400px;
+}
+
+.image-container img {
+    width: 100%; /* Make the image fill the container */
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-container:not(:first-child) {
+    margin-left: 0px; /* Adjust as needed */
+}
+
+.image-description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.login-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}

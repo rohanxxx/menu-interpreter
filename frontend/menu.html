@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Interpreter</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-icon" id="menuIcon">
+            <span>☰</span>
+        </div>
+        <div class="navbar-buttons" id="navbarButtons">
+            <button class="nav-button" onclick="redirectToMenu()">Home</button>
+            <button class="nav-button" onclick="redirectToMenuSearch()">Search for menus by restaurant</button>
+            <button class="nav-button" onclick="redirectToScanMenu()">Scan a menu</button>
+            <button class="nav-button" onclick="redirectToMyProfile()">My profile</button>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="title">Menu Interpreter</h1>
+            <p class="subtitle">Don’t just read menus — understand them, at a glance.</p>
+        </div>
+    </header>
+    <section class="image-grid">
+        <div class="image-container">
+            <img src="./image/food3.jpg" alt="Food Item 3">
+            <!--<span class="image-description">Menu</span>-->
+        </div>
+        <div class="image-container">
+            <img src="./image/food1.jpg" alt="Food Item 1">
+            <!--span class="image-description">Menu</span-->
+        </div>
+        <div class="image-container">
+            <img src="./image/food4.jpg" alt="Food Item 2">
+            <!--span class="image-description">Interpreter</span-->
+        </div>
+    </section>
+    <footer class="footer">
+        <a href="login.html">
+            <button class="login-button"  >sign up/log in</button>
+        </a>
+    </footer>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="./apiGateway-js-sdk/apigClient.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
